@@ -1,0 +1,55 @@
+<!-- templates/prediction_form.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Credit Risk Analysis</title>
+</head>
+<body>
+    <h1>Credit Risk Analysis</h1>
+    <p>
+        <a href="/">
+            <button>Back to Welcome</button>
+        </a>
+    </p>
+    <form action="/predict" method="post">
+        <!-- Add input fields for Age, Income, Home, etc. as needed -->
+        <label for="age">Age:</label>
+        <input type="float" id="age" name="Age">
+        <br>
+        <label for="income">Income:</label>
+        <input type="float" id="income" name="Income">
+        <br>
+        <label for="Home">Home:</label>
+        <input type="float" id="home" name="Home">
+        <br>
+        <label for="Emp_length">Emp_length:</label>
+        <input type="float" id="emp_length" name="Emp_length">
+        <br>
+        <label for="Intent">Intent:</label>
+        <input type="float" id="intent" name="Intent">
+        <br>
+        <label for="Amount">Amount:</label>
+        <input type="float" id="amount" name="Amount">
+        <br>
+        <label for="rate">Rate:</label>
+        <input type="float" id="rate" name="Rate">
+        <br>
+        <label for="Percent_income">Percent_income:</label>
+        <input type="float" id="floatpercent_income" name="Percent_income">
+        <br>
+        <label for="Default">Default:</label>
+        <input type="float" id="default" name="Default">
+        <br>
+        <label for="Cred_length">Cred_length:</label>
+        <input type="float" id="cred_length" name="Cred_length">
+        </br>
+        <button type="submit">Predict</button>
+    </form>
+    
+    <div id="predictions" style="display">
+        <h2>Model Prediction: <span id="rf_prediction"> {{ rf_prediction }} </span></h2>
+    </div>
+
+</body>
+</html>
+
